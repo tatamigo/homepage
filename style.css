@@ -1,0 +1,504 @@
+/* 基本重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans TC', 'Inter', sans-serif; /* 優先使用 Noto Sans TC，其次 Inter */
+    line-height: 1.6;
+    color: #333; /* 深灰 */
+    background-color: #f8f8f8; /* 淺灰背景 */
+    overflow-x: hidden; /* 防止橫向滾動 */
+}
+
+.container {
+    max-width: 1200px; /* 內容最大寬度 */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 按鈕樣式 */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 30px; /* 圓角膠囊形 */
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+    white-space: nowrap; /* 防止文字換行 */
+}
+
+.btn-primary {
+    background-color: #FFB347; /* 溫暖橘黃色，品牌主色 */
+    color: #fff;
+    border: 2px solid #FFB347;
+}
+
+.btn-primary:hover {
+    background-color: #ffa52a;
+    border-color: #ffa52a;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: #fff;
+    color: #66CC99; /* 抹茶綠，品牌輔助色 */
+    border: 2px solid #66CC99;
+    margin-left: 15px; /* 與主按鈕間距 */
+}
+
+.btn-secondary:hover {
+    background-color: #66CC99;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.btn-shopee {
+    background-color: #FF5722; /* 蝦皮標準色 */
+    color: #fff;
+    border: none;
+    margin-left: 20px;
+    font-size: 0.9em;
+    padding: 8px 18px;
+}
+
+.btn-shopee:hover {
+    background-color: #e44d26;
+}
+
+/* Header - 頂部導航 */
+.main-header {
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: sticky; /* 固定在頂部 */
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; /* Logo 高度 */
+    width: auto;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav ul li {
+    margin-left: 30px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: #66CC99; /* 抹茶綠 */
+}
+
+/* Hero Section - 英雄區塊 */
+.hero-section {
+    background-color: #FFF8E1; /* 淺黃色背景，溫暖感 */
+    background-image: url('images/tatami_hero_bg.png'); /* 英雄區塊背景圖，可為榻榻米插畫背景 */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* 防止背景圖超出 */
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    z-index: 1; /* 確保內容在背景圖之上 */
+}
+
+.hero-section h1 {
+    font-size: 3.2em;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.hero-section .subtitle {
+    font-size: 1.5em;
+    color: #666;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.hero-section .intro-text {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Problem Section - 痛點區塊 */
+.problem-section {
+    padding: 80px 0;
+    background-color: #fefefe;
+    text-align: center;
+}
+
+.problem-section h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 60px;
+}
+
+.problems-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.problem-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.problem-item:hover {
+    transform: translateY(-5px);
+}
+
+.problem-item img {
+    width: 80px; /* 小圖標尺寸 */
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.problem-item h3 {
+    font-size: 1.4em;
+    color: #FFB347;
+    margin-bottom: 10px;
+}
+
+.problem-item p {
+    color: #666;
+    font-size: 1.05em;
+}
+
+/* Solution Section - 解決方案與特色區塊 */
+.solution-section {
+    padding: 100px 0;
+    background-color: #F0F9F5; /* 淺綠色背景，清新感 */
+}
+
+.solution-section h2 {
+    font-size: 2.5em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.solution-item {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 80px; /* 每個解決方案項目的間距 */
+}
+
+.solution-item:last-child {
+    margin-bottom: 0;
+}
+
+.solution-item .solution-image {
+    flex: 1;
+    min-width: 300px; /* 確保圖片區塊有最小寬度 */
+}
+
+.solution-item .solution-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+.solution-item .solution-text {
+    flex: 1;
+    padding: 20px 0;
+}
+
+.solution-item .solution-text h3 {
+    font-size: 2em;
+    color: #FFB347;
+    margin-bottom: 15px;
+}
+
+.solution-item .solution-text p {
+    font-size: 1.15em;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* 反轉排列 (圖片在右，文字在左) */
+.solution-item.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Testimonials Section - 顧客見證區塊 */
+.testimonials-section {
+    padding: 80px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.testimonials-section h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 60px;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-card {
+    background-color: #F8F8F8; /* 淺灰背景 */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 使內容與底部對齊 */
+    min-height: 200px; /* 確保卡片高度一致 */
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: #444;
+    font-size: 1.05em;
+    margin-bottom: 20px;
+}
+
+.testimonial-card .customer-info {
+    display: flex;
+    align-items: center;
+    margin-top: auto; /* 將客戶資訊推到底部 */
+}
+
+.testimonial-card .customer-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 2px solid #FFB347;
+}
+
+.testimonial-card .customer-info span {
+    font-weight: 600;
+    color: #333;
+}
+
+/* CTA Bottom Section - 底部行動呼籲 */
+.cta-bottom-section {
+    padding: 80px 0;
+    background-color: #66CC99; /* 抹茶綠，輔助品牌色 */
+    color: #fff;
+    text-align: center;
+}
+
+.cta-bottom-section h2 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.cta-bottom-section p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-bottom-section .btn {
+    margin: 0 10px 20px; /* 調整按鈕間距 */
+}
+
+.cta-bottom-section .btn-secondary {
+    background-color: #fff;
+    color: #66CC99;
+    border-color: #fff;
+}
+
+.cta-bottom-section .btn-secondary:hover {
+    background-color: #e6ffe6; /* 淺綠 */
+    color: #66CC99;
+}
+
+.cta-bottom-section .disclaimer {
+    font-size: 0.9em;
+    opacity: 0.8;
+    margin-top: 30px;
+}
+
+/* Footer - 頁腳 */
+.main-footer {
+    background-color: #333;
+    color: #eee;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-logo img {
+    height: 40px; /* 頁腳 Logo 高度 */
+    margin-bottom: 20px;
+}
+
+.social-links {
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+}
+
+.main-footer p {
+    font-size: 0.9em;
+    margin-bottom: 15px;
+    color: #bbb;
+}
+
+.footer-nav a {
+    color: #eee;
+    text-decoration: none;
+    font-size: 0.9em;
+    margin: 0 10px;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* 響應式設計 (RWD) */
+@media (max-width: 992px) {
+    .main-nav ul li {
+        margin-left: 20px;
+    }
+    .hero-section h1 {
+        font-size: 2.8em;
+    }
+    .hero-section .subtitle {
+        font-size: 1.3em;
+    }
+    .solution-item {
+        flex-direction: column; /* 小螢幕下改為垂直堆疊 */
+        text-align: center;
+    }
+    .solution-item.reverse {
+        flex-direction: column; /* 反轉的也改為垂直堆疊 */
+    }
+    .solution-item .solution-text {
+        padding: 0;
+    }
+    .solution-item .solution-image {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-header {
+        padding: 10px 0;
+    }
+    .nav-content {
+        flex-direction: column; /* 導航欄改為垂直堆疊 */
+    }
+    .main-nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap; /* 連結換行 */
+        justify-content: center;
+    }
+    .main-nav ul li {
+        margin: 5px 10px;
+    }
+    .btn-shopee {
+        margin-left: 0; /* 調整手機版按鈕間距 */
+        margin-top: 10px;
+    }
+    .hero-section {
+        padding: 80px 0;
+    }
+    .hero-section h1 {
+        font-size: 2.2em;
+    }
+    .hero-section .subtitle {
+        font-size: 1.1em;
+    }
+    h2 {
+        font-size: 2em !important; /* 強制覆蓋，確保標題不會過大 */
+    }
+    .problem-section h2,
+    .solution-section h2,
+    .testimonials-section h2,
+    .cta-bottom-section h2 {
+        font-size: 2em; /* 調整所有區塊標題 */
+    }
+    .problems-grid {
+        grid-template-columns: 1fr; /* 單列顯示 */
+    }
+    .solution-item .solution-text h3 {
+        font-size: 1.6em;
+    }
+    .testimonials-grid {
+        grid-template-columns: 1fr; /* 單列顯示 */
+    }
+    .cta-bottom-section .btn {
+        display: block; /* 按鈕垂直堆疊 */
+        margin: 15px auto;
+    }
+    .btn-secondary {
+        margin-left: 0; /* 移除手機版次要按鈕的左邊距 */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    .hero-section h1 {
+        font-size: 1.8em;
+    }
+    .hero-section .intro-text {
+        font-size: 1em;
+    }
+    .problem-item, .testimonial-card {
+        padding: 20px;
+    }
+}
